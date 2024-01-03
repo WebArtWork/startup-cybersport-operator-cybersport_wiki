@@ -1,0 +1,274 @@
+<div class="wrapper">
+	<div class="content">
+		<div class="first-screen header__top">
+			{{{'/template/components/topbar'|c({translate: translate})|safe}}}
+			<section class="welcome">
+				<div class="welcome__circle-first">
+					<img src="template/img/circle.png" class="circle-anim" alt="">
+					<div class="welcome__circle-second">
+						<img src="template/img/circle.png" class="circle-anim-second" alt="">
+					</div>
+				</div>
+				<div class="container">
+					<div class="welcome__title">
+						{{{translate("Land.CYBERSPORT")}}}
+					</div>
+					<div class="welcome__description">
+						{{{translate("Land.Discover the power of eSports with Cybersport, a one-stop platform for all your eSports gaming, training, trading and competition needs. Our Cybersportix brand offers a comprehensive solution for all your needs in the world of eSports. Whether you are a target player or looking to improve your game, Cybersport has you covered. We also offer a range of services to help you level up your game and develop your eSports career so you can maximize your potential. With Cybersport, you can easily access information about the cyber gaming world and make informed decisions. In addition, you can buy all the accessories and equipment you need for eSports right here on our platform. Experience the future of eSports with Cybersport today!")}}}
+					</div>
+				</div>
+			</section>
+		</div>
+		<section class="services">
+			<div class="container">
+				<div class="services__main-title global-title">
+					{{{translate("Land.Popular esports games")}}} <span>{{{translate("Land.in 2023 by viewershipcd")}}}</span>
+				</div>
+				<div class="services__list">
+					<div class="services__wrap">
+						<div class="services__item">
+							<div class="services__img">
+								<img src="template/img/services/1.jpg" alt="">
+							</div>
+							<div class="services__title">
+								{{{translate("Land.Mobile Legends: Bang Bang")}}}
+							</div>
+						</div>
+					</div>
+					<div class="services__wrap">
+						<div class="services__item">
+							<div class="services__img">
+								<img src="template/img/services/2.png" alt="">
+							</div>
+							<div class="services__title">
+								{{{translate("Land.League of Legends")}}}
+							</div>
+						</div>
+					</div>
+					<div class="services__wrap">
+						<div class="services__item">
+							<div class="services__img">
+								<img src="template/img/services/3.webp" alt="">
+							</div>
+							<div class="services__title">
+								{{{translate("Land.Counter-Strike")}}}
+							</div>
+						</div>
+					</div>
+					<div class="services__wrap">
+						<div class="services__item">
+							<div class="services__img">
+								<img src="template/img/services/4.png" alt="">
+							</div>
+							<div class="services__title">
+								{{{translate("Land.Valorant")}}}
+							</div>
+						</div>
+					</div>
+					<div class="services__wrap">
+						<div class="services__item">
+							<div class="services__img">
+								<img src="template/img/services/5.png" alt="">
+							</div>
+							<div class="services__title">
+								{{{translate("Land.Arena of Valor")}}}
+							</div>
+						</div>
+					</div>
+					<div class="services__wrap">
+						<div class="services__item">
+							<div class="services__img">
+								<img src="template/img/services/6.png" alt="">
+							</div>
+							<div class="services__title">
+								{{{translate("Land.PUBG Mobile")}}}
+							</div>
+						</div>
+					</div>
+					<div class="services__wrap">
+						<div class="services__item">
+							<div class="services__img">
+								<img src="template/img/services/7.jpg" alt="">
+							</div>
+							<div class="services__title">
+								{{{translate("Land.Dota 2")}}}
+							</div>
+						</div>
+					</div>
+					<div class="services__wrap">
+						<div class="services__item">
+							<div class="services__img">
+								<img src="template/img/services/8.jpg" alt="">
+							</div>
+							<div class="services__title">
+								{{{translate("Land.Fortnite")}}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="about-us">
+			<div class="about-us__img">
+				<img src="template/img/about.jpg" alt="">
+			</div>
+			<div class="container">
+				<div class="about-us__title global-title">
+					{{{translate("Land.ABOUT")}}} <span>{{{translate("Land.US")}}}</span>
+				</div>
+				<div class="about-us__description">
+					<p>
+						{{{translate("Land.Get to know the passionate and dedicated team behind Cybersport, the ultimate platform revolutionizing the world of esports. Our team is a diverse mix of skilled professionals, ranging from top-tier gamers and technology experts to dedicated esports enthusiasts, all working together to deliver the highest quality esports experience for our users.")}}}
+					</p>
+					<p>
+						{{{translate("Land.Each member of our team brings their unique expertise and fervor for esports, and we take pride in uniting a group of specialists who are truly committed to advancing the world of competitive gaming. Whether you're a professional esports athlete, aspiring to elevate your game, or need assistance with any aspect of esports, our team is here to support you.")}}}
+					</p>
+					<p>
+						{{{translate("Land.Explore the chance to get to know each member of our esports dream team and find out why Cybersport is the platform you can rely on for the ultimate esports experience and support for esports athletes.")}}}
+					</p>
+				</div>
+				<div class="about-us__btn">
+					<a href="/team" class="btn">
+						{{{translate("Land.MEET THE TEAM")}}}
+					</a>
+				</div>
+			</div>
+		</section>
+		<section class="l-product">
+			<div class="container">
+				<div class="l-estate__main-title global-title">
+					BUY <span>PRODUCTS</span>
+				</div>
+				<div class="product__list">
+					{% for product in products %}
+					<div class="product__wrap">
+						
+						<div class="product__item">
+							<div class="product__img">
+								<img src="{{{product.thumb}}}" alt="" />
+							</div>
+							<div class="product__title">
+								{{{product.name}}}
+							</div>
+							<pre class="product__description">{{{product.short}}}</pre>
+							<div class="product__btn-wrap">
+								<a href="/product/{{{product.url || product.id}}}" class="product__btn-heart product__btn-heart--first">
+									<span>OPEN</span>
+								</a>
+								<a href="" class="product__btn-heart product__btn-heart--second">
+									<img src="/template/img/icons/cart.svg" alt="" />
+								</a>
+								<a href="" class="product__btn-heart">
+									<img src="/template/img/icons/heart.svg" alt="" />
+								</a>
+							</div> 
+						</div>
+						
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</section>
+			<section class="l-article">
+				<div class="container">
+					<div class="global-title articles__land-title">
+						OUR <span>ARTICLES</span>
+					</div>
+					<div class="articles__list">
+						<a class="articles__wrap" href="/article/{{{article.id}}}">
+							<div class="articles__item">
+								<div class="articles__img">
+									<img src="/template/img/articles.png" alt="" />
+								</div>
+								<div class="articles__title">Articles title</div>
+								<div class="articles__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam ipsam ut itaque voluptas libero explicabo fugit tempore odit, dolorum nostrum consequuntur iusto reiciendis et autem cum quidem eaque at error?</div>
+							</div>
+						</a>
+						<a class="articles__wrap" href="/article/{{{article.id}}}">
+							<div class="articles__item">
+								<div class="articles__img">
+									<img src="/template/img/articles.png" alt="" />
+								</div>
+								<div class="articles__title">Articles title</div>
+								<div class="articles__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam ipsam ut itaque voluptas libero explicabo fugit tempore odit, dolorum nostrum consequuntur iusto reiciendis et autem cum quidem eaque at error?</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</section>
+		</div>
+		<section class="partners">
+			<div class="container">
+				<div class="partners__main-title global-title">
+					OUR <span>PARTNERS</span>
+				</div>
+				<div class="partners__list">
+					<div class="partners__wrap">
+						<div class="partners__item">
+							<div class="partners__img">
+								<img src="/template/img/articles.png" alt="">
+							</div>
+							<div class="partners__text">
+								<div class="partners__title">
+									Lorem ipsum title
+								</div>
+								<div class="partners__desription">
+									Description information partner
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="partners__wrap">
+						<div class="partners__item">
+							<div class="partners__img">
+								<img src="/template/img/articles.png" alt="">
+							</div>
+							<div class="partners__text">
+								<div class="partners__title">
+									Lorem ipsum title
+								</div>
+								<div class="partners__desription">
+									Description information partner
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--	
+		<section class="download">
+			<div class="container">
+				<div class="download__wrap">
+					<div class="download__text">
+						<div class="download__title global-title">
+							{{{translate("Land.USE OUR")}}} <span>{{{translate("Land.APP")}}}</span>
+						</div>
+						<div class="download__description">
+							{{{translate("Land.If you're looking for a convenient, personalized, and fast way to access information and perform tasks related to real estate, then the Neryxomka mobile app is the way to go. Our app provides a seamless experience that is designed to make your life easier, no matter where you are. With the Neryxomka app, you can access the latest properties, get personalized recommendations, and perform common tasks like searching for properties or making payments with just a few taps. Plus, our app offers offline functionality, so you can access certain features and information even when you're not connected to the internet.")}}}
+
+							{{{translate("Land.The Neryxomka app also offers a faster and more responsive experience, with quicker load times and smoother transitions between screens. And, with better integration with your mobile device's features, such as the camera or GPS, you'll get a more immersive experience. And, with push notifications, you'll never miss a beat. Our app is also designed to be fun and engaging, with gamification elements such as rewards, achievements, and leaderboards.")}}}
+
+							{{{translate("Land.So why settle for a website when you can have all this and more at your fingertips with the Neryxomka mobile app? Download it now and experience the power of real estate, wherever you are!")}}}
+						</div>
+						<div class="download__btn">
+							<a href="" class="btn">
+								<img src="template/img/icons/load.svg" alt="">
+								<span>ANDROID</span>
+							</a>
+							<a href="" class="btn">
+								<img src="template/img/icons/load.svg" alt="">
+								<span>IOS</span>
+							</a>
+						</div>
+					</div>
+					<div class="download__img">
+						<img src="/template/img/load.png" alt="">
+					</div>
+				</div>
+			</div>
+		</section>
+		-->
+	</div>
+	{{{'/template/components/footer'|c({translate: translate})|safe}}}
+</div>

@@ -1,0 +1,11 @@
+{
+	"name": "plan",
+	"plan": {
+		"id": "321321321321",
+		"price": 1200,
+		"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+		"thumb": "https://neryxomka.com/template/img/welcome.png",
+		"name": "Plan Name"
+	}
+}
